@@ -1,0 +1,61 @@
+@import url('../../../algarrobo-colors.css');
+
+.CustomDialog--true .CustomErrorDialog__Title {
+  color: var(--primary-dark);
+}
+
+.CustomDialog--error .CustomErrorDialog__Title {
+  color: var(--danger-dark);
+  padding: 35px 10px 10px 50px;
+}
+
+.CustomErrorDialog--true {
+  padding: 100px 185px 30px 100px;
+  background-color: #fbfbfb;
+}
+
+.CustomErrorDialog__Content__Text {
+  padding: 0 0 35px 26px;
+}
+
+.CustomErrorDialog__Content__ErrorMessage {
+  padding-left: 25px;
+}
+
+.CustomErrorDialog__Title svg {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.CustomErrorDialog__Title span {
+  font-size: 18px;
+  text-transform: none;
+}
+
+.CustomErrorPage__Gif {
+  width: 285px;
+  height: auto;
+  float: right;
+}
+
+.CustomDialog__Actions_Button {
+  margin-left: 10px;
+}
+
+.DiscountsDetails__Data__Actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.DiscountstDetails__Data__Actions__Button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.Error_Button--true {
+  padding-right: 185px;
+}
+
+.CustomErrorDialog__Content__Button {
+  padding-left: 20px;
+}
