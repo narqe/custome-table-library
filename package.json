@@ -1,0 +1,81 @@
+{
+  "name": "custome-table-component",
+  "version": "1.3.0",
+  "description": "custome table for algarrobo",
+  "author": "joelacef",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "custome-table-component"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs --external=react,react-dom,react-is",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.2.0",
+    "i18next": "^19.8.4",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "i18next-icu": "1.4.2",
+    "microbundle-crl": "^0.13.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "react": "^16.14.0",
+    "react-beautiful-dnd": "^12.2.0",
+    "react-dom": "^16.14.0",
+    "react-i18next": "^11.7.3",
+    "react-scripts": "^3.4.1"
+  },
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "dependencies": {
+    "@babel/plugin-syntax-jsx": "^7.14.5",
+    "react-is": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.1"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "keywords": []
+}
